@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VacancyController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('vacancies', VacancyController::class)
+    ->only(['index']);

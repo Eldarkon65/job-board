@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vacancy;
 use Illuminate\Http\Request;
+use Illuminate\Queue\Jobs\Job;
+
 
 class VacancyController extends Controller
 {
@@ -11,7 +14,7 @@ class VacancyController extends Controller
      */
     public function index()
     {
-        //
+        return view('vacancy.index', ['vacancies' => Vacancy::all()]);
     }
 
     /**
