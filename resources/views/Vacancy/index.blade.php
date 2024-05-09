@@ -4,19 +4,19 @@
         :links="['Vacancies' => route('vacancies.index')]"
     />
 
-    <div class="mb-4 rounded-md border border-slate-300 bg-white p-4 shadow-sm">
-        <form action="{{ route('vacancies.index') }}" method="GET">
+    <div class="mb-4 rounded-md border border-slate-300 bg-white p-4 shadow-sm" x-data="" >
+        <form x-ref="filters" id="filter-form" action="{{ route('vacancies.index') }}" method="GET" >
         <div class="mb-4 grid grid-cols-2 gap-4">
             <div>
                 <div class="mb-1 font-semibold">Search</div>
-                <x-text-input name="search" value="{{ request('search') }}" placeholder="Search for any text" />
+                <x-text-input name="search" value="{{ request('search') }}" placeholder="Search for any text" form-ref="filters" />
             </div>
             <div>
                 <div class="mb-1 font-semibold">Search</div>
 
                 <div class="flex space-x-2">
-                    <x-text-input name="min_salary" value="{{ request('min_salary') }}" placeholder="From" />
-                    <x-text-input name="max_salary" value="{{ request('max_salary') }}" placeholder="To" />
+                    <x-text-input name="min_salary" value="{{ request('min_salary') }}" placeholder="From" form-ref="filters"  />
+                    <x-text-input name="max_salary" value="{{ request('max_salary') }}" placeholder="To" form-ref="filters"  />
                 </div>
             </div>
             <div>
@@ -31,9 +31,9 @@
             </div>
         </div>
 
-            <button class="w-full rounded-md border border-slate-100">
+            <x-button class="w-full">
                 Filter
-            </button>
+            </x-button>
         </form>
     </div>
 
