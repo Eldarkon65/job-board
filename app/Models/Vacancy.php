@@ -9,7 +9,7 @@ class Vacancy extends Model
 {
     use HasFactory;
 
-    public static array $experience = ['intern','junior','intermediate','senior'];
+    public static array $experience = ['Intern','Junior','Middle','Senior'];
     public static array $category = [
         'IT',
         'Finance',
