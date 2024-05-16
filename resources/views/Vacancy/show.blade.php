@@ -8,7 +8,13 @@
         <p class="text-sm text-slate-500">
             {{ nl2br($vacancy->description) }}
         </p>
+
+        <x-link :href="route('vacancies.application.create', $vacancy)">
+            Apply
+        </x-link>
     </x-job-card>
+
+
 
     <x-card>
         <h2 class="mb-4 text-lg font-medium">More {{ $vacancy->employer->company_name }} vacancies</h2>

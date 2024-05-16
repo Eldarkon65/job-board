@@ -1,4 +1,4 @@
-<nav>
+<nav class="mb-4">
     <ul class="flex space-x-4 text-slate-500">
 
         <li>
